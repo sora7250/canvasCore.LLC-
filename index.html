@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body, div, h1, h2, h3, p, ul, li {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Noto Serif JP', serif;
+      line-height: 1.6;
+    }
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      background-color: rgba(20, 20, 20, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .hamburger {
+      position: absolute;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+    }
+    .hamburger div {
+      width: 26px;
+      height: 2px;
+      background-color: #ffffff;
+      border-radius: 2px;
+    }
+    .header-title {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    .container {
+      padding: 90px 20px 40px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 35px 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+    .profile-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    .name-jp {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 6px;
+      letter-spacing: 2px;
+    }
+    .name-en {
+      font-size: 15px;
+      color: #bbbbbb;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+    }
+    .info-group {
+      margin-bottom: 18px;
+      text-align: left;
+    }
+    .info-label {
+      font-size: 13px;
+      color: #999999;
+      margin-bottom: 4px;
+    }
+    .info-value {
+      font-size: 17px;
+      letter-spacing: 1px;
+    }
+    .section-title {
+      margin-bottom: 25px;
+      text-align: left;
+      font-size: 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    .history-list {
+      list-style: none;
+      text-align: left;
+      padding-left: 12px;
+      border-left: 2px solid rgba(255, 255, 255, 0.15);
+    }
+    .history-item {
+      position: relative;
+      margin-bottom: 20px;
+      padding-left: 18px;
+    }
+    .history-item::before {
+      content: '';
+      position: absolute;
+      left: -17px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    }
+    .history-date {
+      font-size: 13px;
+      color: #aaaaaa;
+      margin-bottom: 2px;
+    }
+    .history-event {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="header-title">CanvasCore</div>
+  </div>
+  
+  <div class="container">
+    <div class="card">
+      <img src="__PROFILE_IMAGE_BASE64__" alt="吉浦蒼空の顔写真" class="profile-img">
+      <div class="name-jp">吉浦 蒼空</div>
+      <div class="name-en">Yoshiura Sora</div>
+      
+      <div class="info-group">
+        <div class="info-label">役職</div>
+        <div class="info-value">代表</div>
+      </div>
+      <div class="info-group">
+        <div class="info-label">管轄</div>
+        <div class="info-value">鹿児島支部</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">組織内経歴</div>
+      <ul class="history-list">
+        <li class="history-item">
+          <div class="history-date">2023.3</div>
+          <div class="history-event">CanvasCore東京に映像クリエイターとして映像制作部配属</div>
+        </li>
+        <li class="history-item">
+          <div class="history-date">2023.7</div>
+          <div class="history-event">映像制作部主事就任</div>
+        </li>
+        <li class="history-item">
+          <div class="history-date">2023.12</div>
+          <div class="history-event">CanvasCoreHR人材評価協議委員会HRプロファイラー兼任</div>
+        </li>
+        <li class="history-item">
+          <div class="history-date">2024.2</div>
+          <div class="history-event">組織規定変更により辞令を受け、共同代表兼任</div>
+        </li>
+        <li class="history-item">
+          <div class="history-date">2025.5</div>
+          <div class="history-event">CanvasCore東京の発展的解消により、CanvasCore代表就任</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-title">連絡先</div>
+      <div class="info-group">
+        <div class="info-label">Tel</div>
+        <div class="info-value">090-6757-9024</div>
+      </div>
+      <div class="info-group">
+        <div class="info-label">Email</div>
+        <div class="info-value">sora.yoshiura7250@gmail.com</div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', function() {
+      alert('目次メニューがタップされました。');
+    });
+  </script>
+</body>
+</html>
